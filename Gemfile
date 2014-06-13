@@ -7,6 +7,16 @@ gem 'rails'
 group :development, :test do
 	gem 'sqlite3'
 	gem 'rspec-rails'
+	gem 'guard-rspec'
+	gem 'listen', '2.7.5'
+#	gem 'spork-rails'
+#	gem 'guard-spork'
+#	gem 'childprocess'
+end
+
+require 'rbconfig'
+	if RbConfig::CONFIG['target_os'] =~ /mswin|mingw|cygwin/i
+		gem 'wdm', '>= 0.1.0'
 end
 
 group :test do
